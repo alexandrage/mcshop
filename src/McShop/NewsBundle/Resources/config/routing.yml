@@ -1,0 +1,27 @@
+mc_shop_news_homepage:
+    path:     /
+    defaults: { _controller: McShopNewsBundle:Default:index }
+
+mc_shop_news_view:
+    path:     /{id}/view
+    defaults: { _controller: McShopNewsBundle:Default:view }
+
+mc_shop_news_new:
+    path:     /new
+    defaults: { _controller: McShopNewsBundle:NewsCrud:new }
+
+mc_shop_news_edit:
+    path:     /{id}/edit
+    defaults: { _controller: McShopNewsBundle:NewsCrud:edit }
+
+mc_shop_news_remove:
+    path:     /{id}/remove
+    defaults: { _controller: McShopNewsBundle:NewsCrud:remove }
+
+mc_shop_commentary_edit:
+    path:     /commentary/{id}/edit
+    defaults: { _controller: McShopNewsBundle:CommentaryCrud:edit }
+
+mc_shop_commentary_remove:
+    path:     /commentary/{id}/remove
+    defaults: { _controller: McShopNewsBundle:CommentaryCrud:remove }

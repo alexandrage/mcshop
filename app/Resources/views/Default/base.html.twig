@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="{{ app.request.locale|split('_')[0] }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="McShop v4 development template">
+    <meta name="author" content="mops1k<bednyj.mops@gmail.com>">
+
+    <title>{{ 'project_title'|setting('McShop v4') }}{{ app_title.value is not null ? ' :: ' ~ app_title.value|trans(app_title.attributes) }}</title>
+
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
+    <link rel="shortcut icon" href="{{ asset('assets/img/favicon.png') }}" type="image/png">
+
+    {% block stylesheets %}
+    <link href="{{ asset('assets/css/bootstrap.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/bootstrap-theme.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.offcanvas.min.css') }}"/>
+
+    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+    {% endblock %}
+</head>
+
+<body>
+<div class="wrapper">
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle offcanvas-toggle pull-right" data-toggle="offcanvas" data-target="#js-bootstrap-offcanvas">
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{{ path('homepage', {_locale: app.request.locale}) }}">
+                    <img src="{{ asset('assets/img/brand.png') }}" width="26px"> {{ 'project_brand'|setting('McShop v4') }}
+                </a>
+            </div>
+            <div class="navbar-offcanvas navbar-offcanvas-touch" id="js-bootstrap-offcanvas">
+                {% block top_menu %}
+                {% if is_granted('ROLE_USER') %}
+                <ul class="nav navbar-nav">
+                    {%- set class = path(app.request.get('_route'), app.request.get('_route_params')) == path('mc_shop_shopping_cart_storefront') ? 'active' %}
+                    {# Нет выпадающего меню #}
+                    <li{{ ' class='~class }}>
+                        <a href="{{ path('mc_shop_shopping_cart_storefront') }}">
+                            <i class="fa fa-university"></i> {{ 'shopping_cart.storefront.menu'|trans }}</a>
+                    </li>
+                </ul>
+                {% endif %}
+                {{ renderMenu('page.page', ':Default/StaticPage:menu.html.twig') }}
+                {{ renderMenu('user.user', ':Default/User:menu.html.twig') }}
+                {% endblock %}
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+
+    {% block header %}
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1>Minecraft for fun</h1>
+                    <h2 class="subtitle">No need huge slogan, we believe in less is better</h2>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+
+    <div id="content">
+        <div class="container">
+            {% block container %}
+            <div class="row">
+                <div class="col-xs-12 col-md-9 col-md-push-3">
+                    {% block content %}{% endblock %}
+                </div>
+                <div class="col-xs-12 col-md-3 col-md-pull-9">
+                    {% block left_menu %}
+                    <div class="row col-md-12">
+                        <div class="panel panel-default panel-menu">
+                            <div class="panel-heading" data-toggle="collapse" data-target="#menu-1"
+                                 aria-expanded="false" aria-controls="menu-1">{{ 'server.block_title'|trans }}</div>
+                            <div class="panel-body collapse in" id="menu-1">
+                                {{ render(controller('McShopServersBundle:Default:queryAll', {'_locale': app.request.locale})) }}
+                            </div>
+                        </div>
+                    </div>
+                    {% endblock %}
+                </div>
+            </div>
+            {% endblock %}
+        </div>
+    </div>
+
+    {% block footer %}
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="copyright">&copy; mops1k</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="credits">
+                        <a href="#">Minecraft Shop CMS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</div>
+
+{% block javascripts %}
+<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="{{ asset('assets/js/bootstrap.offcanvas.js') }}"></script>
+<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('assets/js/notify.min.js') }}"></script>
+<script src="{{ asset('assets/js/app.js') }}"></script>
+<script>
+    {% set flashes = app.session.flashBag.all %}
+    {% for type, messages in flashes %}
+    {% for message in messages %}
+    $.notify("{{ message|raw }}", "{{ type }}");
+    {% endfor %}
+    {% endfor %}
+</script>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    app.title:
+        class: McShop\Core\Twig\Title
+
+    app.twig.title_extension:
+        class: McShop\Core\Twig\Extension\TitleExtension
+        arguments:
+            - '@app.title'
+        tags:
+            - { name: twig.extension, alias: title }
+
+    gedmo.listener.softdeleteable:
+        class: Gedmo\SoftDeleteable\SoftDeleteableListener
+        tags:
+            - { name: 'doctrine.event_subscriber' }
+        calls:
+            - [ 'setAnnotationReader', [ '@annotation_reader' ] ]
+
+    gedmo.listener.timestampable:
+        class: Gedmo\Timestampable\TimestampableListener
+        tags:
+            - { name: doctrine.event_subscriber }
+        calls:
+            - [ 'setAnnotationReader', [ '@annotation_reader' ] ]
+
+    gedmo.listener.tree:
+        class: Gedmo\Tree\TreeListener
+        tags:
+            - { name: doctrine.event_subscriber }
+        calls:
+            - [ 'setAnnotationReader', [ '@annotation_reader' ] ]
+
+    mc_shop_console_form.number_transformer:
+        class: McShop\Core\Form\ConsoleTransformer\NumberTransformer
+        public: false
+        parent: matthias_symfony_console_form.abstract_transformer
+        tags:
+            - { name: form_to_question_transformer, form_type: Symfony\Component\Form\Extension\Core\Type\NumberType }
+
+    mc_shop.listener.exception:
+        class: McShop\Core\Listener\ExceptionListener
+        arguments: [ '@twig', '@mc_shop.setting.helper', '@app.title', '%kernel.environment%' ]
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception, method: 'onKernelException', priority: -100 }

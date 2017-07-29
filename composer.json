@@ -1,0 +1,72 @@
+{
+    "name": "mops1k/McShop-v4",
+    "license": "MIT",
+    "type": "project",
+    "description": "The \"McShop v4\" distribution",
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "Application\\Migrations\\": "app/Resources/Migrations"
+        },
+        "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
+    },
+    "require": {
+        "php": ">=5.4",
+        "symfony/symfony": "2.8.*",
+        "doctrine/orm": "^2.4.8",
+        "doctrine/doctrine-bundle": "~1.4",
+        "symfony/swiftmailer-bundle": "~2.3,>=2.3.10",
+        "symfony/monolog-bundle": "^3.0.2",
+        "sensio/distribution-bundle": "~5.0",
+        "sensio/framework-extra-bundle": "^3.0.2",
+        "incenteev/composer-parameter-handler": "~2.0",
+        "doctrine/doctrine-migrations-bundle": "^1.2",
+        "matthiasnoback/symfony-console-form": "^2.1",
+        "zendframework/zend-eventmanager": "^2.6",
+        "doctrine/data-fixtures": "~1.1",
+        "doctrine/doctrine-fixtures-bundle": "^2.3",
+        "eschmar/css-inliner-bundle": "^0.1.0",
+        "white-october/pagerfanta-bundle": "^1.0",
+        "evence/soft-deleteable-extension-bundle": "^1.1",
+        "mops1k-forked/doctrine-extensions-bundle": "^1.2",
+        "mops1k/minecraftserverstatus": "~1.0",
+        "mops1k/minecraftskinview": "^1.0",
+        "mops1k/minecraft-rcon": "^1.0",
+        "simplethings/entity-audit-bundle": "^1.0",
+        "gregwar/captcha-bundle": "^2.0"
+    },
+    "require-dev": {
+        "sensio/generator-bundle": "~3.0",
+        "symfony/phpunit-bridge": "~2.7"
+    },
+    "scripts": {
+        "symfony-scripts": [
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
+        ],
+        "post-install-cmd": [
+            "@symfony-scripts"
+        ],
+        "post-update-cmd": [
+            "@symfony-scripts"
+        ]
+    },
+    "config": {
+        "vendor-dir": "libs"
+    },
+    "extra": {
+        "symfony-app-dir": "app",
+        "symfony-web-dir": "web",
+        "symfony-assets-install": "relative",
+        "incenteev-parameters": {
+            "file": "app/config/parameters.yml"
+        },
+        "branch-alias": {
+            "dev-master": "0.1-dev"
+        }
+    }
+}

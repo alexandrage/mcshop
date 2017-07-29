@@ -1,0 +1,18 @@
+services:
+    minecraft.server.status:
+        class:  MinecraftServerStatus\MinecraftServerStatus
+        public: false
+
+    minecraft.server.rcon:
+        class:  MinecraftRcon\Rcon
+
+    mc_shop.server.query:
+        class:  McShop\ServersBundle\Services\ServerStatusUpdate
+        arguments:
+            - '@doctrine'
+            - '@minecraft.server.status'
+
+    mc_shop.server.listener:
+        class:  McShop\ServersBundle\Listener\ServerListener
+        tags:
+            - { name: doctrine.event_listener, event: 'prePersist', method: 'prePersist'}

@@ -1,0 +1,304 @@
+ru:                                 Русский
+en:                                 English
+yes:                                Да
+no:                                 Нет
+page:
+    not_found:                      Страница не найдена!
+    no_pages:                       Статических страниц не найдено!
+    no_rights:                      У Вас нет прав для просмотра данной страницы!
+    error:                          "Ошибка @number@!"
+    add_success:                    Страница успешно создана!
+    add.title:                      Создание новой страницы
+    submit:                         Сохранить страницу
+    edit_success:                   Страница отредактированна!
+    edit.title:                     Редактирование страницы
+    deleted:                        Страница успешно удалена!
+    form:
+        slug:                       Имя части адреса страницы
+        title:                      Заголовок страницы
+        content:                    Контент
+        show_in_menu:               Показывать страницу в меню
+        role:                       Привилегия для просмотра страницы
+    list:
+        title:                      Статические страницы
+    menu:
+        add:                        Создать статическую страницу
+        title:                      Статические страницы
+news:
+    new_success:                    Новость добавлена!
+    edit_success:                   Новость успешно отредактированна!
+    remove_success:                 Новость удалена!
+    show:                           'Просмотр новости "@subject@"'
+    add:                            Добавить новость
+    add.title:                      Добавление новости
+    edit.title:                     "Редактирование новости с ID #@id@"
+    no_posts:                       На данный момент еще не было опубликовано новостей!
+    link.read_more:                 Просмотреть новость
+    submit:                         Сохранить новость
+    form:
+        subject:                    Тема
+        less_content:               Краткое содержание
+        full_content:               Полное содержание
+    comments:
+        submit:                     Завершить редактирование
+        edit_success:               Комментарий успешно отредактирован!
+        remove_success:             Комментарий удален!
+        edit_title:                 Редактирование комментария
+        count:                      "комментарии: @count@"
+        send:                       Отправить комментарий
+        no_rights:                  Только зарегистрированные пользователи могут комментировать новости!
+        no_comments:                Комментариев нет!
+        user_says:                  "@username@ пишет"
+        form.title:                 Напишите свой комментарий
+user:
+    profile:
+        use:
+            avatar:                 Аватар
+            head:                   Голова
+        avatar_help:                Максимальный размер аватара 200px на 200px.
+        upload_avatar:              Загрузить аватар
+        skin_preview:               Текущий скин игрока
+        upload_skin:                Скин
+        upload_cloak:               Плащ
+        skin:                       Скин
+        cloak:                      Плащ
+        upload:                     Загрузить
+        password:
+            change:                 Смена пароля
+            change_button:          Сменить
+            changed:                Пароль успешно изменен!
+        skins:
+            wrong_type:             Неверный тип файла
+            no_hd_rights:           Нет прав на загрузку
+        avatar:
+            wrong_type:             Неверный тип файла
+            wrong_size:             Неверный размер аватара
+    real_cash:                      'На счету: @cash@ руб.'
+    increase_real_cash:             Пополнить счет
+    coupon_activate:                Активация купона
+    activate:                       Активировать
+    launcher:
+        login:
+            error:                  Неверный логин или пароль!
+    menu:
+        profile:                    Профиль
+        logout:                     Выход
+        sign-in:                    Авторизация
+        sign-up:                    Регистрация
+    recover:
+        user_not_found:             Пользователь не найден!
+        button:
+            recover:                Восстановить
+        message:
+            welcome:                Восстановление пароля для учетной записи
+            password_title:         Установить новый пароль
+            success:                Восстановление пароля прошло успешно!
+        form:
+            title:                  Логин или E-mail
+        email:
+            code:                   Код подтверждения для восстановления пароля
+            message:
+                code:               |
+                                Чтобы восстановить свой пароль перейдите по <a href=@code_link@>этой ссылке</a>.
+                                Или введите код вручную <a href=@enter_code_link@>здесь</a>.<br />
+                                Код активации: <b>@code@</b>
+title:
+    registration_form:              Регистрация
+    code_activation:                Активация кода подтверждения
+    authorization:                  Авторизация
+registration:
+    label:
+        code:                       Код подтверждения
+    button:
+        check_code:                 Отправить код
+        signup:                     Зарегистрироваться
+    message:
+        email:
+            approve_code:           Подтверждение Вашей регистрации!
+            registration_success:   Вы успешно зарегистрировались!
+            activated:              Ваш аккаунт успешно активировн!
+            code:                   |
+                                Для активации Вашего аккаунта перейдите по <a href=@code_link@>ссылке</a>.
+                                Или введите код вручную <a href=@enter_code_link@>здесь</a>.<br />
+                                Код активации: <b>@code@</b>
+        approve_email:              Для завершения регистрации вы должны подтвердить свою почту!
+        wrong_code:                 Код подтверждения неверен!
+        welcome:                    Регистрация в системе McShop v4
+        code_activated:             Код подтверждения успешно активирован!
+        have_account:               У вас уже есть аккаунт?
+system:
+    message:
+        unknown_error:              Произошла неизвестная ошибка. Пожалуйста, обратитесь к администратору для ее устранения.
+    error:                          "Ошибка @code@"
+form:
+    registration:
+        username:                   Логин
+        email:                      E-mail
+        password:                   Пароль
+        re_password:                Повторите пароль
+        captcha:                    Код
+        captcha_help:               Введите код с картинки
+validation:
+    password:
+        must_match:                 Пароли должны совпадать!
+login:
+    message:
+        no_account:                 У Вас еще нет аккаунта? Зарегистрируйтесь!
+        forgot_password:            Забыли пароль?
+        welcome:                    Авторизация в системе McShop v4
+    username:                       Логин или E-mail
+    password:                       Пароль
+    remember_me:                    Запомнить меня
+    submit:                         Авторизоваться
+    error:
+        already_logged_in:          Вы уже авторизованы в системе!
+server:
+    name:                           "Название сервера"
+    host:                           "Адрес сервера (домен или IP адрес)"
+    port:                           "Порт сервера"
+    shopping_cart_id:               "Идентификатор в таблице плагина ShoppingCart"
+    block_title:                    Мониторинг
+    offline:                        Выключен
+    total:                          Общий онлайн
+    manage:
+        list:                       Список серверов
+        new:                        Добавление сервера
+        add:                        Добавить сервер
+        edit:                       Редактирование сервера
+        name:                       Название
+        host:                       Домен или IP-адрес
+        port:                       Порт
+        rcon:
+            port:                   RCON порт
+            password:               RCON пароль
+    menu:
+        rcon:                       Управление RCON
+        list:                       Управление серверами
+    rcon:
+        select:                     Выберите сервер на который будут отправлять команды RCON
+        select_server:              Сервер не выбран!
+        no_command:                 Нет команды для отправки!
+        unknown_server:             Выбран неизвестный сервер!
+        no_connection:              Ошибка соединения RCON!
+        port:                       "RCON порт"
+        password:                   "RCON пароль"
+finance:
+    coupon:
+        menu:                       Генерация купонов
+        amount:                     Сумма
+        count:                      Количество
+        due_date:                   Крайний срок активации
+        status:                     Статус
+        generation:                 Генерация купонов
+        generate_button:            Сгенерировать новые купоны
+        code:                       Код активации
+        activated_by:               Активировал
+        activated_at:               Дата активации
+        status_active:              Не активирован
+        status_disabled:            Активирован
+        filter_button:              Применить
+        not_found:                  Купоны не найдены
+        deactive:                   Активирован
+        active:                     Не активирован
+        activation_error:           Во время активации купона произошла ошибка, вероятно ввы указали неверный купон или срок действия купона закончился!
+        activation_success:         Купон успешно активирован!
+        filter:
+            title:                  Фильтр
+            amount:                 Сумма
+            due_date:               Крайний срок активации
+            activated_at:           Дата активации
+            activated_by:           Активировал
+            active:                 Активен?
+filter.reset:                       Обнулить фильтр
+
+shopping_cart:
+    menu:
+        managment_title:            Управление магазином
+    item:
+        menu:                       Товары
+        new:                        Добавить новый товар
+        new_success:                Товар успешно добавлен
+        edit_success:               Товар успешно отредактирован
+        remove_success:             Товар удален
+        empty:                      Товаров не найдено
+        title:
+            list:                   Список товаров
+            edit:                   Редактирование товара
+            new:                    Добавление товара
+        type:
+            item:                   Игровой пердмет (блок, оружие и т.д.)
+            money:                  Игровая валюта
+            rgown:                  Владение регионом
+            rgmem:                  Вхождение в регион как участник
+            permgroup:              Группа прав
+            perm:                   Единичное право
+        server:                     Сервер
+        name:                       Название
+        category:                   Категория
+        image:                      Изображение
+        item:                       Идентификатор товара в игре
+        extra:                      Дополнительные данные товара (NBT теги)
+        item_type:                  Тип товара
+        amount:                     Количество
+        price:                      Стоимость
+        sale:                       Скидка
+    category:
+        list_title:                 Список категорий
+        title:                      Название категории
+        edit_title:                 Редактирование категории
+        new_title:                  Создание новой категории
+        new_success:                Категория успешно создана
+        edit_success:               Категория успешно отредактирована
+        delete_success:             Категория и все её подкатегории успешно удалены
+        menu:                       Категории
+        new:                        Создать новую категорию товаров
+        parent:                     Категория родитель
+        items_count:                Товаров в категории
+        empty:                      Категорий не найдено
+        save:                       Сохранить
+    storefront:
+        menu:                       Магазин
+        home:                       Магазин
+        empty:                      В данной категории и ее подкатегориях товаров нет!
+        categories_title:           Категории
+        server:                     Сервер
+        amount:                     Количество
+        old_price:                  Цена без скидки
+        price:                      Цена
+        sale:                       Скидка
+        to_cart:                    в корзину
+        filter_title:               Фильтр (кликните чтобы показать/скрыть)
+        filter_button:              Фильтровать
+        filter_reset:               Сбросить фильтр
+        filter:
+            server:                 Сервер
+            amount:                 Количество
+            price_from:             Цена от
+            price_to:               Цена до
+            is_sale:                Есть скидка
+            type:                   Тип
+    basket:
+        menu:                       Корзина
+        product:                    Товар
+        amount:                     Количество
+        price:                      Цена
+        total:                      Итого
+        remove:                     Убрать
+        to_shop:                    Продолжить покупки
+        buy:                        Оплатить
+        add_success:                Товар добавлен в корзину
+        remove_success:             Товар удален из корзины
+        wrong_amount:               Неверное количество товара
+        changed_amount:             Количество измененно
+        more_money:                 "Пополнить счет на @amount@ руб."
+        no_money:                   Недостаточно денег для совершения покупки
+        buy_success:                Покупка успешно совершена!
+setting:
+    title:                          Настройки системы
+    project_title:                  Заголовок страниц проекта
+    project_brand:                  Бренд проекта
+    hd_price:                       Цена плащей и HD скинов
+    hd_days:                        Срок действия HD скинов и плащей в днях (0 - вечно)
+    template:                       Шаблон проекта
+    save:                           Сохранить настройки
+    save_success:                   Настройки успешно сохранены!

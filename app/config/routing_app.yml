@@ -1,0 +1,33 @@
+mc_shop_user:
+    resource: "@McShopUserBundle/Resources/config/routing.yml"
+    prefix:   /user
+
+mc_shop_news:
+    resource: "@McShopNewsBundle/Resources/config/routing.yml"
+    prefix:   /news
+
+mc_shop_static_page:
+    resource: "@McShopStaticPageBundle/Resources/config/routing.yml"
+    prefix:   /page
+
+mc_shop_servers:
+    resource: "@McShopServersBundle/Resources/config/routing.yml"
+    prefix:   /server
+
+
+mc_shop_finance_coupon:
+    resource: "@McShopFinanceBundle/Resources/config/routing_coupon.yml"
+    prefix:   /coupon
+
+mc_shop_shopping_cart:
+    resource: "@McShopShoppingCartBundle/Resources/config/routing.yml"
+    prefix:   /shop
+
+mc_shop_setting:
+    resource: "@McShopSettingBundle/Resources/config/routing.yml"
+    prefix:   /setting
+
+#
+#simple_things_entity_audit:
+#    resource: "@SimpleThingsEntityAuditBundle/Resources/config/routing.yml"
+#    prefix: /audit

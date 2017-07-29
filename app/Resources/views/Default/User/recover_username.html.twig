@@ -1,0 +1,26 @@
+{% extends ':Default:base.html.twig' %}
+{% form_theme form 'bootstrap_3_layout.html.twig' %}
+
+{% block header %}{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        #content {
+            padding-top: 60px;
+        }
+    </style>
+{% endblock %}
+
+{% block container %}
+    <div class="col-md-6 col-md-offset-3">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">{{ 'user.recover.message.welcome'|trans|upper }}</div>
+            <div class="panel-body">
+                {{ form_start(form) }}
+                {{ form_row(form.user) }}
+                <button type="submit" class="btn btn-lg btn-block btn-primary">{{ 'user.recover.button.recover'|trans }}</button>
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}

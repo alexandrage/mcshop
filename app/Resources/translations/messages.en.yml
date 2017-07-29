@@ -1,0 +1,304 @@
+ru:                                 Русский
+en:                                 English
+yes:                                Yes
+no:                                 No
+page:
+    not_found:                      Page not found!
+    no_pages:                       Pages not found!
+    no_rights:                      You do not have rights to view this page!
+    error:                          "Error @number@!"
+    add_success:                    Page has created!
+    add.title:                      Create new static page
+    submit:                         Save page
+    edit_success:                   Page edited!
+    edit.title:                     Edit page
+    deleted:                        Page was deleted!
+    form:
+        slug:                       Page address name
+        title:                      Page title
+        content:                    Content
+        show_in_menu:               Show page in menu
+        role:                       Page view role
+    list:
+        title:                      Static pages
+    menu:
+        add:                        Create static page
+        title:                      Static pages
+news:
+    new_success:                    Post added!
+    edit_success:                   Post edited success!
+    remove_success:                 Post removed!
+    show:                           'Full news "@subject@"'
+    add:                            Add post
+    add.title:                      New post
+    edit.title:                     "Edit news ID #@id@"
+    no_posts:                       There are no published news!
+    link.read_more:                 Read more
+    submit:                         Save post
+    form:
+        subject:                    Subject
+        less_content:               Preview content
+        full_content:               Full content
+    comments:
+        submit:                     Complete edit
+        edit_success:               Commentary edited success!
+        remove_success:             Commentary removed!
+        edit_title:                 Commentary edit
+        count:                      "commentaries: @count@"
+        send:                       Send your commentary
+        no_rights:                  To post you commentary you have to login or register!
+        no_comments:                No commentaries for post yet!
+        user_says:                  "@username@ says"
+        form.title:                 Write your commentary
+user:
+    profile:
+        use:
+            avatar:                 Show avatar
+            head:                   Show head from skin
+        avatar_help:                Maximal resolution of image is 200x200 pixels
+        upload_avatar:              Upload avatar
+        skin_preview:               Current player skin
+        upload_skin:                Skin
+        upload_cloak:               Cape
+        skin:                       Skin
+        cloak:                      Cape
+        upload:                     Upload
+        password:
+            change:                 Change your password
+            change_button:          Change
+            changed:                Password has changed!
+        skins:
+            wrong_type:             Wrong file type
+            no_hd_rights:           No rights for upload
+        avatar:
+            wrong_type:             Wrong file type
+            wrong_size:             Wrong file resolution
+    real_cash:                      'Money: @cash@ RUB'
+    coupon_activate:                Coupon code activation
+    activate:                       Activate
+    increase_real_cash:             Add real cash
+    launcher:
+        login:
+            error:                  Wrong username or password!
+    menu:
+        profile:                    Profile
+        logout:                     Logout
+        sign-in:                    Sign In
+        sign-up:                    Sign Up
+    recover:
+        user_not_found:             User not found!
+        button:
+            recover:                Recover
+        message:
+            welcome:                Account password recovering
+            password_title:         Set new password
+            success:                Password recovering completed!
+        form:
+            title:                  Username or E-mail
+        email:
+            code:                   Password recovery confirmation code
+            message:
+                code:               |
+                                To restore your password you need to go <a href=@code_link@>this link</a>.
+                                Or enter code below <a href=@enter_code_link@>here</a>.<br />
+                                Your code: <b>@code@</b>
+title:
+    registration_form:              Registration
+    code_activation:                Confirmation code activation
+    authorization:                  Sign-in
+registration:
+    label:
+        code:                       Confirmation code
+    button:
+        check_code:                 Send code
+        signup:                     SignUp
+    message:
+        email:
+            approve_code:           Confirm your registration
+            registration_success:   Your registration was success!
+            activated:              Your account succesfully activated!
+            code:                   |
+                                To activate your account you need to go <a href=@code_link@>this link</a>.
+                                Or enter code below <a href=@enter_code_link@>here</a>.<br />
+                                Your code: <b>@code@</b>
+        approve_email:              For registration ending you must approve your email!
+        wrong_code:                 Confirmation code is incorrect!
+        welcome:                    Registration in McShop v4
+        code_activated:             Confirmation code sucessfull activated!
+        have_account:               Allready have account?
+system:
+    message:
+        unknown_error:              An unknown error occurred. Please contact the administrator to fix the problem.
+    error:                          "Error @code@"
+form:
+    registration:
+        username:                   Username
+        email:                      E-mail
+        password:                   Password
+        re_password:                Retype password
+        captcha:                    Code
+        captcha_help:               Enter code from picture
+validation:
+    password:
+        must_match:                 Passwords must match!
+login:
+    message:
+        no_account:                 Do not have account? Register!
+        forgot_password:            Forgot password?
+        welcome:                    Sign In to McShop v4
+    username:                       Username or E-mail
+    password:                       Password
+    remember_me:                    Remember me
+    submit:                         Authorize
+    error:
+        already_logged_in:          You are already logged in before!
+server:
+    name:                           "Display name"
+    host:                           "Server host (or ip address)"
+    port:                           "Server port"
+    shopping_cart_id:               "Identificator in shopping cart plugin table"
+    block_title:                    Monitoring
+    offline:                        Offline
+    total:                          Total online
+    manage:
+        list:                       Server's list
+        new:                        Creating server
+        add:                        New server
+        edit:                       Edit server
+        name:                       Name
+        host:                       Domain or IP-address
+        port:                       Port
+        rcon:
+            port:                   RCON port
+            password:               RCON password
+    menu:
+        rcon:                       RCON managment
+        list:                       Server's managment
+    rcon:
+        select:                     Select server for RCON connection
+        select_server:              No server selected!
+        no_command:                 No command to send!
+        unknown_server:             Unknown server selected!
+        no_connection:              RCON connection error!
+        port:                       "RCON port"
+        password:                   "RCON password"
+finance:
+    coupon:
+        menu:                       Generate coupons
+        amount:                     Cash
+        count:                      Amount
+        due_date:                   Due date
+        status:                     Status
+        generation:                 Generate coupons
+        generate_button:            Generate new coupons
+        code:                       Activation code
+        activated_by:               Activated by
+        activated_at:               Activation date
+        status_active:              Not actovated
+        status_disabled:            Activated
+        filter_button:              Apply
+        not_found:                  Coupons not found!
+        deactive:                   Activated
+        active:                     Not activated
+        activation_error:           Error occured! Maybe wrong coupon or due date of activation is end!
+        activation_success:         Coupon activated!
+        filter:
+            title:                  Filter
+            amount:                 Cash
+            due_date:               Due date
+            activated_at:           Activation date
+            activated_by:           Activated by
+            active:                 Is active?
+filter.reset:                       Reset filter
+
+shopping_cart:
+    menu:
+        managment_title:            Shop managment
+    item:
+        menu:                       Items
+        new:                        Add new item
+        new_success:                Item added
+        edit_success:               Item edited
+        remove_success:             Item removed
+        empty:                      Item's not found
+        title:
+            list:                   Item's list
+            edit:                   Edit item
+            new:                    Add item
+        type:
+            item:                   Game item (block, weapon, etc.)
+            money:                  Vault game money
+            rgown:                  Region ownership
+            rgmem:                  Region membership
+            permgroup:              Permission group
+            perm:                   Single permission
+        server:                     Server
+        name:                       Item name
+        category:                   Category
+        image:                      Item image
+        item:                       Item in-game id
+        extra:                      Extra data for item (NBT tags)
+        item_type:                  Type
+        amount:                     Amount
+        price:                      Price
+        sale:                       Sale
+    category:
+        list_title:                 Category list
+        title:                      Title
+        edit_title:                 Category edit
+        new_title:                  Category create
+        new_success:                Category was created
+        edit_success:               Category was edited
+        delete_success:             Category and all subcategories was deleted
+        menu:                       Categories
+        new:                        Create new category of items
+        parent:                     Parent category
+        items_count:                Items in category
+        empty:                      No any categories was found
+        save:                       Save
+    storefront:
+        menu:                       Shop
+        home:                       Shop home
+        empty:                      Item's in category and it's subcategories not found
+        categories_title:           Categories
+        server:                     Server
+        amount:                     Amount
+        old_price:                  Old price
+        price:                      Price
+        sale:                       Sale
+        to_cart:                    add to cart
+        filter_title:               Filter (click to show/hide)
+        filter_button:              Filter
+        filter_reset:               Reset filter
+        filter:
+            server:                 Server
+            amount:                 Amount
+            price_from:             Price from
+            price_to:               Price to
+            is_sale:                Is item in sale?
+            type:                   Type
+    basket:
+        menu:                       Shopping cart
+        product:                    Item
+        amount:                     Amount
+        price:                      Price
+        total:                      Total
+        remove:                     Remove
+        to_shop:                    Continue shopping
+        buy:                        Buy
+        add_success:                Item was added to cart
+        remove_success:             Item was removed from cart
+        wrong_amount:               Wrong items amount
+        changed_amount:             Amount was changed
+        more_money:                 "Add account on the @ amount @ rub."
+        no_money:                   No money for continue
+        buy_success:                Item's successfully buyed!
+setting:
+    title:                          System settings
+    project_title:                  Project pages title
+    project_brand:                  Project brand
+    hd_price:                       Price for capes and HD skins
+    hd_days:                        Buy days for capes and HD skins (0 - forewer)
+    template:                       Project template
+    save:                           Save settings
+    save_success:                   Settings was saved!

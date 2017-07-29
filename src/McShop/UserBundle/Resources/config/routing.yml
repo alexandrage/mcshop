@@ -1,0 +1,69 @@
+mc_shop_user_login:
+    path:     /login
+    defaults: { _controller: McShopUserBundle:Default:login }
+
+mc_shop_user_logout:
+    path:     /logout
+
+mc_shop_user_registration:
+    path:     /signup
+    defaults:
+        _controller: McShopUserBundle:Registration:register
+
+mc_shop_user_registration_code_check:
+    path:     /signup/code_check/{code}
+    defaults:
+        _controller: McShopUserBundle:Registration:codeCheck
+
+
+mc_shop_user_registration_code:
+    path:     /signup/code
+    defaults:
+        _controller: McShopUserBundle:Registration:code
+
+mc_shop_user_recover_username:
+    path:     /recover
+    defaults:
+        _controller: McShopUserBundle:Recover:recover
+
+mc_shop_user_recover_code:
+    path:     /recover/code
+    defaults:
+        _controller: McShopUserBundle:Recover:code
+
+mc_shop_user_recover_code_check:
+    path:     /recover/code/{code}
+    defaults:
+        _controller: McShopUserBundle:Recover:codeCheck
+
+mc_shop_user_minecraft_login:
+    path:   /minecraft/{username}/{password}
+    defaults:
+        _controller: McShopUserBundle:Default:minecraftLogin
+
+mc_shop_user_profile:
+    path:   /profile
+    defaults:
+        _controller: McShopUserBundle:Profile:index
+
+mc_shop_user_upload_file:
+    path:   /profile/upload
+    defaults:
+        _controller: McShopUserBundle:Profile:uploadFile
+
+mc_shop_user_unlink:
+    path:   /profile/{type}/unlink
+    defaults:
+        _controller: McShopUserBundle:Profile:unlink
+
+mc_shop_user_password_change:
+    path:   /profile/password/change
+    defaults:
+        _controller: McShopUserBundle:Profile:password
+    methods: ["POST"]
+
+mc_shop_user_image_type_change:
+    path:   /profile/image/{choice}/change
+    defaults:
+        _controller: McShopUserBundle:Profile:skinAsAvatar
+    methods: ["GET"]
